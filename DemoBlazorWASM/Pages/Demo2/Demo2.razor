@@ -1,0 +1,13 @@
+﻿@page "/demo2"
+<h3>Demo2</h3>
+
+<div style="border: solid 2px chartreuse;">
+    <SousComposant ValueFromCaller="@valeur" NotifyTaskDone="ReponseDeEnfant" />
+</div>
+@if (IsButtonVisible)
+{
+    <button class="btn btn-danger" @onclick="Increment">Add</button>
+}
+@code {
+
+}

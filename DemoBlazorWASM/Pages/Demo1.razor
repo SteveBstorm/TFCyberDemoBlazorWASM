@@ -1,0 +1,35 @@
+﻿@page "/demo1"
+<h3>Demo1</h3>
+
+<p>
+    Valeur de la prop IsBool : @IsBool
+   @* 
+       @NomProp => Binding One-Way (Lecture de la valeur de la prop)
+   *@
+
+    @if(IsBool)
+    {
+        <p>Coucou petite peruche</p>
+    }
+    else
+    {
+        <p>T'es tendue comme un string Natacha</p>
+    }
+
+    <p>
+        <button class="btn btn-outline-dark" @onclick="MaMethode">Click ici</button>
+    </p>
+    <hr />
+    <p>Valeur de Value : @Value</p>
+
+    <input type="text" @bind-value="Value" />
+    @*
+        Binding Two Way => Lecture / Ecriture de propriété
+    *@
+
+@* 
+    @for(int i = 0; i <10; i++)
+    {
+        <p>@i</p>
+    } *@
+</p>
