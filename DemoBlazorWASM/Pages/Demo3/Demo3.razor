@@ -1,0 +1,24 @@
+﻿@page "/demo3"
+<h3>Demo3</h3>
+
+<EditForm class="form" Model="MyForm" OnValidSubmit="Submit">
+    <DataAnnotationsValidator />
+    <p class="form-control">
+        Titre : <InputText @bind-Value="MyForm.Title" />
+        <ValidationMessage For="() => MyForm.Title" />
+    </p>
+    <p class="form-control">
+        Année : <InputNumber @bind-Value="MyForm.ReleaseYear" />
+    </p>
+    <fieldset>
+        <legend>Realisateur</legend>
+        <p class="form-control">
+            Nom : <InputText @bind-Value="MyForm.RealistorLastname" />
+        </p>
+        <p class="form-control">
+            Prenom : <InputText @bind-Value="MyForm.RealistorFirstname" />
+        </p>
+    </fieldset>
+    <button type="submit" class="btn btn-outline-success">Valider</button>
+    <ValidationSummary />
+</EditForm>
