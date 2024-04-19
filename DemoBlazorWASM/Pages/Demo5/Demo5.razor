@@ -1,0 +1,16 @@
+﻿@page "/demo5"
+<h3>Pokedex</h3>
+
+<ul class="list-group">
+    @foreach(Result r in Pokedex.results)
+    {
+        <li class="list-group-item">
+            @r.name
+        </li>
+    }
+
+</ul>
+
+@code {
+
+}

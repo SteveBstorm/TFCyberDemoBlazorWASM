@@ -8,8 +8,6 @@ namespace DemoBlazorWASM.Pages.Demo2
 
         public bool IsButtonVisible { get; set; }
 
-        [Inject]
-        public IConfiguration Config{ get; set; }
 
         public void ReponseDeEnfant()
         {
