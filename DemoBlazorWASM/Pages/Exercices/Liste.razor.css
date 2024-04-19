@@ -1,0 +1,14 @@
+﻿.bidule {
+    display : flex;
+    flex-direction: row;
+    flex-wrap : nowrap;
+}
+.left{
+    padding:20px;
+    min-width : 40%;
+}
+
+.right{
+    padding:20px;
+    max-width : 40%;
+}

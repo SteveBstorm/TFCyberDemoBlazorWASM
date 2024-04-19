@@ -1,0 +1,40 @@
+﻿@page "/article"
+@using DemoBlazorWASM.Pages.Exercices.Models
+<div class="bidule">
+    <div class="left">
+        <h3>Liste</h3>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Article a in ListeArticle)
+                {
+                    <tr>
+                        <td>@a.Name</td>
+                        <td>
+                            <button class="btn btn-outline-info" @onclick="() => SelectArticle(a)">Info</button>
+                            <button class="btn btn-outline-danger" @onclick="() => Remove(a.Id)">X</button>
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="right">
+        <div>
+            <AddArticleForm NotifyCreated="AddArticle" />
+        </div>
+        <div>
+            @if(SelectedArticle is not null)
+            {
+                <DetailsArticle currentArticle="SelectedArticle" />
+            }
+        </div>
+    </div>
+</div>

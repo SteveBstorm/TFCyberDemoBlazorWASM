@@ -1,0 +1,18 @@
+﻿<h3>AddArticleForm</h3>
+
+<EditForm Model="MyForm" OnValidSubmit="Submit">
+    <DataAnnotationsValidator />
+    <p class="form-control">
+        Nom : <InputText @bind-Value="MyForm.Name" />
+        <ValidationMessage For="() => MyForm.Name" />
+    </p>
+    <p class="form-control">
+        Prix : <InputNumber @bind-Value="MyForm.Price" />
+        <ValidationMessage For="() => MyForm.Price" />
+    </p>
+    <p class="form-control">
+        Description : <InputText @bind-Value="MyForm.Description" />
+        <ValidationMessage For="() => MyForm.Description" />
+    </p>
+    <button class="btn btn-outline-success">Valider</button>
+</EditForm>
